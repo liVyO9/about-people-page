@@ -1,10 +1,6 @@
 backend:
   name: git-gateway
-<<<<<<< Updated upstream
-  branch: master
-=======
   branch: develop
->>>>>>> Stashed changes
 
 media_folder: static/img
 public_folder: /img
