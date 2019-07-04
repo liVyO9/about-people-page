@@ -62,4 +62,8 @@ collections:
   - name: "about people"
     label: "About people"
     files:
-      - file:
+      - file: "src/pages/about-people/index.js"
+        label: "About people page"
+        name: "people"
+        fields:
+          - {label: Title, name: title, widget: string}

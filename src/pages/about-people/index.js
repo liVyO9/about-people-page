@@ -12,7 +12,6 @@ export default class Index extends React.Component {
     return (
         <Layout>
             <div>
-                <h1>NASZ ZESPÓŁ</h1>
             </div>
         </Layout>
     )
