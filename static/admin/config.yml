@@ -65,7 +65,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-people-page"}          
           - {label: Title, name: title, widget: string}
           - {label: Map of places, name: map, widget: image}
-          - {label: People, name: people, widget: object, fields: [{label: Bartosz, name: Bartosz, widget: object, fields:  [{label: Image, name: img, widget: image}, {label: Description, name: description, widget: text}]}]}
+          - {label: People, name: people, widget: object, fields: [{label: Bartosz, name: Bartosz, widget: object, fields:  [{label: Image, name: img, widget: image}, {label: Description, name: description, widget: text}]}, {label: Magda, name: Magda, widget: object, fields:  [{label: Image, name: img, widget: image}, {label: Description, name: description, widget: text}]}]}
   - name: "people"
     label: "People"
     files:
