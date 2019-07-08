@@ -58,12 +58,22 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-          
-  - name: "about people"
-    label: "About people"
-    files:
-      - file: "src/pages/about-people/index.js"
+      - file: "src/pages/about-people/index.md"
         label: "About people page"
         name: "people"
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-people-page"}          
           - {label: Title, name: title, widget: string}
+          - {label: Map of places, name: map, widget: image}
+          - {label: People, name: people, widget: object, fields: [{label: Bartosz, name: Bartosz, widget: object, fields:  [{label: Image, name: img, widget: image}, {label: Description, name: description, widget: text}]}]}
+  - name: "people"
+    label: "People"
+    files:
+      - file: "src/pages/about-people/index.md"
+        label: People list
+        name: people-list
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: "People", name: "people", widget: "list", fields: [{label: Name, name: name, widget: string}, {label: Image, name: image, widget: image}, {label: Name, name: name, widget: string}]}
+# {label: Person, name: person, widget: object, fields: [{label: Name, name: name, widget: string}, {label: Img, name: img, widget: image}]}
