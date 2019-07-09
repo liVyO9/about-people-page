@@ -69,11 +69,10 @@ collections:
   - name: "people"
     label: "People"
     files:
-      - file: "src/pages/about-people/index.md"
+      - file: "src/pages/people/index.md"
         label: People list
         name: people-list
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: "People", name: "people", widget: "list", fields: [{label: Name, name: name, widget: string}, {label: Image, name: image, widget: image}, {label: Name, name: name, widget: string}]}
-# {label: Person, name: person, widget: object, fields: [{label: Name, name: name, widget: string}, {label: Img, name: img, widget: image}]}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "people-page"}
+          - {label: "People", name: "people", widget: "list"}
+...
