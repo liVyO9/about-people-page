@@ -1,38 +1,42 @@
 import React from 'react'
-// import Link from 'gatsby'
+// import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 
-export default class Index extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-        title: "O nas",
-        people_arr: ["Bartosz", "Magda", "Ania"]
-    }
-  }
+const AboutPeoplePage = (
+//   {
+//   data: {
+//     allMarkdownRemark: { group },
+//     site: {
+//       siteMetadata: { title },
+//     },
+//   },
+// }
+) => (
+  <Layout>
+        <div className="aboutAKRA-container">
+            <div className="text-part">tekst testowy</div>
+            <div className="img-part">
+                <img src="../../../static/img/europe-map.png" alt="zamiast zdjęcia"></img>
+            </div>
+        </div>
+    </Layout> 
+)
 
-  PersonTemplate(person){
+export default AboutPeoplePage
 
-  }
+// export const tagPageQuery = graphql`
+  // query TagsQuery {
+  //   site {
+  //     siteMetadata {
+  //       title
+  //     }
+  //   }
+  //   allMarkdownRemark(limit: 1000) {
+  //     group(field: frontmatter___tags) {
+  //       fieldValue
+  //       totalCount
+  //     }
+  //   }
+  // }
+// `
 
-  render() {
-    return (
-        <Layout>
-            <section className="section section--gradient">
-                <div className="container">
-                    <div className="section">
-                        <div className="content">
-                            <div className="title">
-                                <h1>{this.state.title}</h1>
-                            </div>
-                            <div className="content">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </Layout>
-    )
-  }
-}

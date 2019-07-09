@@ -1,32 +1,63 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPeopleTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => (
-    <div>
-        <div>
-            {title}
+export const AboutPeoplePageTemplate = ({ title, content, contentComponent }) => {
+  const PageContent = contentComponent || Content
+
+  return (
+    <section className="section section--gradient">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="section">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
+              <PageContent className="content" content={content} />
+            </div>
+          </div>
         </div>
-        
-    </div>
-)
-
-const AboutPeople = ({}) => {
-    return (
-        <Layout>
-            <AboutPeopleTemplate />
-        </Layout>
-    )
+      </div>
+    </section>
+  )
 }
 
-export default AboutPeople
+AboutPeoplePageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
+}
+
+const AboutPeoplePage = ({ data }) => {
+  const { markdownRemark: post } = data
+
+  return (
+    <Layout>
+      <AboutPeoplePageTemplate
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
+        content={post.html}
+      />
+    </Layout>
+  )
+}
+
+AboutPeoplePage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default AboutPeoplePage
+
+export const aboutPeoplePageQuery = graphql`
+  query AboutPeoplePage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`
