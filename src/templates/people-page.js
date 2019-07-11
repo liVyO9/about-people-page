@@ -65,6 +65,7 @@ query PeoplePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        title
         info{
             image {
                 childImageSharp {

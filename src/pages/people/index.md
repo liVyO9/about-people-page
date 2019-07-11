@@ -5,6 +5,6 @@ info:
   description3: "Wierzymy, że nasza pozytywna energia oraz gotowość na nowe wyzwania to ogromny atut w dynamicznym świecie IT. Nasi klienci wiedzą, że mogą na nas polegać.\n"
   image: /img/europe-map.png
 path: /people
-team: Zdzisiek
+team: 
 templateKey: people-page
 title: "O NAS"
