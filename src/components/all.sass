@@ -28,23 +28,33 @@ $black: #2b2523
     margin-bottom: 1.5rem
     margin-top: 0
 
+.container
+  margin-left: 5vw
+  margin-right: 5vw
+
 // About people
 .aboutAKRA-container
-  width: 100vw
-  height: 555px
-  display: flex
-  text-align: left
-  flex-direction: row
+  display: grid
+  grid-template-rows: auto auto auto
+
+.aboutAKRA-container-title
+  text-align: center
+  font-size: 2em
+
+.aboutAKRA-container-description
+  display: grid
+  grid-template-columns: 40vw 40vw
+
 
 .aboutAKRA-container .text-part
-  width: 48vw
-  padding-left: 1vw
-  padding-right: 1vw
+  margin-bottom: 0
+  margin-left: 0
+  margin-right: 1.5rem
+  margin-top: 1.5rem
+  width: 40vw
 
 .aboutAKRA-container .img-part
-  width: 48vw
-  padding-left: 1vw
-  padding-right: 1vw
+  width: 40vw
 
 // Helper Classes
 .full-width-image-container
