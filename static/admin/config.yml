@@ -65,15 +65,16 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "people-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "info", widget: "object", fields: [{label: "Description1", name: "description1", widget: "text"}, {label: "Description2", name: "description2", widget: "text"}, {label: "Description3", name: "description3", widget: "text"}, {label: "Image", name: "image", widget: "image"}]}
-          - {label: "Post Author", name: "author", widget: "relation", collection: "people", searchFields: ["galleryItems"], valueField: "galleryItems", displayFields: ["galleryItems"]}
           
-  - name: "people"
-    label: "People"
-    files:
-      - file: "src/pages/people/index.md"
-        label: "People"
-        name: "people"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "people"}
-          - {label: "Team", name: "team", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Description", name: "description", widget: "text"}, {label: "Image", name: "image", widget: "image"}]}
-    
+  - name: "about-person"
+    label: "About person"
+    folder: "src/pages/about-person"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-person-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Short description", name: "desc1", widget: "string"}
+      - {label: "About person", name: "desc2", widget: "text"}
