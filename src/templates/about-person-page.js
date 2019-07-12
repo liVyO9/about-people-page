@@ -44,7 +44,7 @@ const AboutPerson = ({ data }) => {
 
     return(
         <Layout>
-            <AboutPeopleTemplate
+            <AboutPersonTemplate
             name={frontmatter.name}
             image={frontmatter.image}
             desc1={frontmatter.desc1}
